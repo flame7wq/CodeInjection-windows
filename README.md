@@ -2,40 +2,40 @@
 
 ## Some Key Functions
 ### OpenProcess()
-HANDLE OpenProcess(
-  DWORD dwDesiredAccess,  // access flag
-  BOOL bInheritHandle,    // handle inheritance option
-  DWORD dwProcessId       // process identifier
+HANDLE OpenProcess(<br>
+DWORD dwDesiredAccess,  // access flag<br>
+BOOL bInheritHandle,    // handle inheritance option<br>
+DWORD dwProcessId       // process identifier<br>
 );
 
 ### VirtualAllocEx()
-LPVOID VirtualAllocEx(
-  HANDLE hProcess,          // process to allocate memory
-  LPVOID lpAddress,         // desired starting address 
-  SIZE_T dwSize,            // size of region to allocate
-  DWORD flAllocationType,   // type of allocation
-  DWORD flProtect           // type of access protection
+LPVOID VirtualAllocEx(<br>
+  HANDLE hProcess,          // process to allocate memory<br>
+  LPVOID lpAddress,         // desired starting address <br>
+  SIZE_T dwSize,            // size of region to allocate<br>
+  DWORD flAllocationType,   // type of allocation<br>
+  DWORD flProtect           // type of access protection<br>
 );
 
 ### WriteProcessMemory()
-BOOL WriteProcessMemory(
-  HANDLE hProcess,                // handle to process
-  LPVOID lpBaseAddress,           // base of memory area
-  LPCVOID lpBuffer,               // data buffer
-  SIZE_T nSize,                   // count of bytes to write
-  SIZE_T * lpNumberOfBytesWritten // count of bytes written
-);
+BOOL WriteProcessMemory(<br>
+  HANDLE hProcess,                // handle to process<br>
+  LPVOID lpBaseAddress,           // base of memory area<br>
+  LPCVOID lpBuffer,               // data buffer<br>
+  SIZE_T nSize,                   // count of bytes to write<br>
+  SIZE_T * lpNumberOfBytesWritten // count of bytes written<br>
+);<br>
 
 ### CreateRemoteThread()
-**Evil Function**
-HANDLE CreateRemoteThread(
-  HANDLE hProcess,                          // handle to process
-  LPSECURITY_ATTRIBUTES lpThreadAttributes, // SD
-  SIZE_T dwStackSize,                       // initial stack size
-  LPTHREAD_START_ROUTINE lpStartAddress,    // thread function
-  LPVOID lpParameter,                       // thread argument
-  DWORD dwCreationFlags,                    // creation option
-  LPDWORD lpThreadId                        // thread identifier
+**Evil Function**<br>
+HANDLE CreateRemoteThread(<br>
+  HANDLE hProcess,                          // handle to process<br>
+  LPSECURITY_ATTRIBUTES lpThreadAttributes, // SD<br>
+  SIZE_T dwStackSize,                       // initial stack size<br>
+  LPTHREAD_START_ROUTINE lpStartAddress,    // thread function<br>
+  LPVOID lpParameter,                       // thread argument<br>
+  DWORD dwCreationFlags,                    // creation option<br>
+  LPDWORD lpThreadId                        // thread identifier<br>
 );
 
 ## Some Key Steps
